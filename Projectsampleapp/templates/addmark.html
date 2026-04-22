@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="addmark" method="POST">
+        {% csrf_token %}
+        <select name="sid" id="">
+            {% for i in data %}
+            <option value="{{i.id}}">{{i.id}}  {{i.Name}}</option>
+            {% endfor %}
+        </select><br> <br>
+        <label for="">Mark</label>
+        <input type="text" name="Mark"><br><br>
+        <label for="">Grade</label>
+        <input type="text" name="Grade" ><br><br>
+
+        <input type="submit" value="Insert">
+    </form>
+
+</body>
+</html>

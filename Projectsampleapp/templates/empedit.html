@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Update</h3>
+    <form action="../empedit2/{{x.id}}" method="POST">
+        {% csrf_token %}
+        <label for="">Name</label>
+        <input type="text" value="{{x.Name}}" name="Name"><br>
+        <label for="">Age</label>
+        <input type="text" value="{{x.Age}}" name="Age"><br>
+        <label for="">Email_id</label>
+        <input type="text" value="{{x.Email_id}}" name="Email_id"><br>
+        <label for="">Phone</label>
+        <input type="text" value="{{x.Phone}}" name="Phone"><br><br>
+        <input type="submit" value="Update">
+        
+    </form>
+    
+</body>
+</html>

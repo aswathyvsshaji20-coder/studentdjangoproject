@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mark</th>
+            <th>Grade</th>
+        </tr>
+
+        {% for i in data %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.Sid.Name}}</td>
+            <td>{{i.Sid.Email_id}}</td>
+            <td>{{i.Mark}}</td>
+            <td>{{i.Grade}}</td>
+            <td><a href="editmark/{{i.id}}">UPDATE</a></td>
+            <td><a href="deletemark/{{i.id}}">DELETE</a></td>
+            <td><a href="deleteall/{{i.Sid.id}}">DELETE DATA</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

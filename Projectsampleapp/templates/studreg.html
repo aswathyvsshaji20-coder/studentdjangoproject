@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="studreg" method="POST">
+        {% csrf_token %}
+        <label for="">Name</label>
+        <input type="text" name="Name"> <br><br>
+        <label for="">Age</label>
+        <input type="text" name="Age"><br><br>
+        <label for="">Email_id</label>
+        <input type="text" name="Email_id"><br><br>
+        <label for="">Phone</label>
+        <input type="text" name="Phone"><br><br>
+        <label for="">Gender</label> <br>
+        <input type="radio" name="Gender" value="M">Male<br>
+        <input type="radio" name="Gender" value="F">Female<br>
+        <input type="radio" name="Gender" value="O">Others<br>
+        <input type="submit" value="Register">
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="../editmark1/{{data.id}}" method="POST">
+        {% csrf_token %}
+        <label for="">id</label>
+        <input type="text" value="{{data.id}}" name="id" readonly><br><br>
+        <label for="">Name</label>
+        <input type="text" value="{{data.Sid.Name}}" name="Sid" readonly><br><br>
+        <label for="">Sid</label>
+        <input type="text" value="{{data.Sid.Email_id}}" name="Sid" readonly><br><br>
+        <label for="">Mark</label>
+        <input type="text" value="{{data.Mark}}" name="Mark"><br><br>
+        <label for="">Grade</label>
+        <input type="text" value="{{data.Grade}}" name="Grade" ><br><br>
+
+        <input type="submit" value="UPDATE">
+    </form>
+
+</body>
+</html>
