@@ -15,6 +15,7 @@ class Profile(models.Model):
     Name=models.CharField(max_length=100)
     Resume=models.FileField(upload_to='media')
 
+
 class Student(models.Model):
     Name=models.CharField(max_length=100)
     Age=models.PositiveIntegerField()
